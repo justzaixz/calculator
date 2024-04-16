@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zain's Calculator</title>
+    <link rel="stylesheet" href="calculatorcss.css">
+    <h2>Welcome To Zain's Calculator!</h2>
+
+    <style>
+        h2 {
+            color: black;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        body {
+            background-image: url('https://images2.alphacoders.com/546/546093.jpg'); /* Background Image*/
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Rest of your CSS code */
+        
+        #backToHomeButton {
+            position: fixed;
+            bottom: 20px;
+            right: 30px; /* Adjusted right position */
+            width: 150px; /* Adjust the width of the button */
+        }
+    </style>
+</head>
+  
+<body>
+
+    <div class="calculator">
+        <form>
+            <div class="display">
+                <input type="text" name="display">
+            </div>
+            <div>
+                <input type="button" value="AC" onclick="display.value = '' " class="operator">
+                <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)"  class="operator">
+                <input type="button" value="." onclick="display.value += '.' " class="operator">
+                <input type="button" value="/" onclick="display.value += '/' " class="operator">
+            </div>
+            <div>
+                <input type="button" value="7" onclick="display.value += '7'">
+                <input type="button" value="8" onclick="display.value += '8'">
+                <input type="button" value="9" onclick="display.value += '9'">
+                <input type="button" value="*" onclick="display.value += '*'" class="operator">
+            </div>
+            <div>
+                <input type="button" value="4" onclick="display.value += '4'">
+                <input type="button" value="5" onclick="display.value += '5'">
+                <input type="button" value="6" onclick="display.value += '6'">
+                <input type="button" value="-" onclick="display.value += '-'" class="operator">
+            </div>
+            <div>
+                <input type="button" value="1" onclick="display.value += '1'"> 
+                <input type="button" value="2" onclick="display.value += '2'">
+                <input type="button" value="3" onclick="display.value += '3'">
+                <input type="button" value="+" onclick="display.value += '+'" class="operator">
+            </div>
+            <div>
+                <input type="button" value="00" onclick="display.value += '00'">
+                <input type="button" value="0" onclick="display.value += '0'">
+                <input type="button" value="=" class="equal operator" onclick="display.value = eval(display.value)" >
+            </div>
+        </form>
+        <!-- Bottom right button -->
+        <input type="button" value="Back to Home" id="backToHomeButton" onclick="BottomRightButtonClick()">
+    </div>
+
+    <script>
+        function BottomRightButtonClick() {
+            setTimeout(function() {
+                window.location.href = "file:///C:/Users/zaind/OneDrive/Documents/My%20System/systemhtml.html"; // Directs you to my system 
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>
